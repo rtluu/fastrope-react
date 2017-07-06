@@ -1,0 +1,201 @@
+@import 'mixins';
+@import 'variables';
+
+//Hero (Main) Block
+.hero-block{
+  background: url('../img/home/backgrounds/windmill.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  padding-bottom: 180px;
+  width: 100vw;
+
+  .hero-inner{
+    display: block;
+    margin: 0 auto;
+    max-width: 750px;
+    position: relative;
+    top: 192px;
+
+    .hero-headline{
+      color: white;
+      font-size: 66px;
+      font-weight: 300;
+      line-height: 77px;
+      text-align: center;
+
+      #bold{
+        font-weight: 900;
+      }
+
+      #italic{
+        font-family: 'Stix-BoldItalic';
+        font-weight: 600;
+        font-style: italic;
+      }
+    }
+
+    .hero-divider{
+      background: #AAAAAA;
+      display: block;
+      height: 1px;
+      margin: 15px auto 38px auto;
+      position: relative;
+      width: 717px;
+    }
+
+    .hero-description{
+      color: #B9B9B9;
+      font-family: 'Stix-Italic';
+      font-style: italic;
+      font-size: 28px;
+      text-align: center;
+    }
+
+    .hero-button-link{
+      display: inline-block;
+      left: 50%;
+      position: relative;
+      @include transform( translateX(-50%));
+
+      #hero-button{
+        background: none;
+        border: 4px solid $fr-yellow;
+        cursor: pointer;
+        height: 65px;
+        margin-top: 90px;
+        margin-bottom: 180px;
+        width: 375px;
+
+        &:hover{
+          background: $fr-yellow;
+
+          .button-text{
+            color: white;
+          }
+        }
+
+        .button-text{
+          color: $fr-yellow;
+          font-size: 20px;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+
+//Featured In Block;
+.press-block{
+  background: #CCCCCC;
+  display: block;
+  padding: 64px 10px;
+
+  .press-description{
+    color: #555555;
+    display: block;
+    font-family: $stixI;
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .press-list{
+    display: block;
+    margin: 45px auto 10px auto;
+    max-width: 1318px;
+
+    .press-item{
+      display: inline-block;
+      list-style: none;
+      margin: 0 40px;
+
+      #forbes{
+        width: 106px;
+      }
+      #usatoday{
+        width: 160px;
+      }
+      #cnn{
+        width: 64px;
+      }
+      #techcrunch{
+        width: 212px;
+      }
+      #bloomberg{
+        width: 150px;
+      }
+      #fortune{
+        width: 154px;
+      }
+
+      img{
+        height: 30px;
+      }
+    }
+  }
+}
+
+
+//capabilities Block
+.capabilities-block{
+  background: url('../img/home/backgrounds/eeg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  padding-bottom: 200px;
+  width: 100vw;
+
+  .capabilities-inner{
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    padding: 200px 0 0 0;
+
+    .capabilities-headline{
+      color: white;
+      display: block;
+      font-size: 66px;
+      font-weight: 300;
+      line-height: 77px;
+      margin: 0 auto;
+      max-width: 990px;
+      text-align: center;
+
+      #bold{
+        font-weight: 900;
+      }
+
+      #italic{
+        font-family: 'Stix-BoldItalic';
+        font-weight: 600;
+        font-style: italic;
+      }
+    }
+
+    .capabilities-list{
+      display: block;
+      margin: 150px auto 0 auto;
+      max-width: 1318px;
+
+      .capabilities-item{
+        display: inline-block;
+        margin: 0 70px;
+        text-align: center;
+
+        img{
+          vertical-align: top;
+          width: 65px;
+        }
+
+        .capabilities-text{
+          color: $fr-yellow;
+          font-size: 18px;
+          font-weight: 600;
+          margin-top: 35px;
+        }
+      }
+    }
+  }
+}

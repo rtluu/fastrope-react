@@ -1,0 +1,61 @@
+.nav{
+  background: white;
+  padding: 14px 30px;
+  position: relative;
+  width: 100%;
+
+  //Unique Styling for Homepage Nav
+  &#home{
+    background: transparent;
+    padding: 30px 45px;
+    position: absolute;
+    #fr-logo{
+      background: url('../img/logo/fr-logo-white.svg');
+    }
+
+    .right{
+      right: 45px;
+      top: 44px;
+
+      .page-link{
+        color: white;
+      }
+    }
+  } //End Homepage Nav
+
+  .left{
+    display: inline-block;
+
+    .home-link{
+
+      #fr-logo{
+        background: url('../img/logo/fr-logo-yellow.svg');
+        background-size: 48px 54px;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: inline-block;
+        height: 54px;
+        width: 48px;
+      }
+    }
+  }
+
+  .right{
+    display: inline-block;
+    position: absolute;
+    right: 30px;
+    top: 28px;
+
+    .page-link{
+      color: #4C4C4C;
+      font-family: 'Open Sans', sans-serif;
+      margin: 0 10px;
+      padding: 10px;
+      font-size: 18px;
+
+      &:hover{
+        opacity: 0.7;
+      }
+    }
+  }
+}
