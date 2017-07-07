@@ -1,15 +1,16 @@
+require('../stylesheets/case.scss');
+
 import React from 'react'
 import Nav from '../components/Nav.jsx'
 import Footer from '../components/Footer.jsx'
 
-const Team = (props) => {
+const Case = (props) => {
   return (
-    <div id="team">
+    <div id="case">
       <Nav />
-      <h1>Team Page</h1>
       <Footer />
     </div>
   )
 }
 
-export default Team
+export default Case

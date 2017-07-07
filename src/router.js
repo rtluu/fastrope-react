@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
 
-import Home from './containers/home.js'
-import Team from './containers/team.js'
+import Home from './containers/Home.js'
+import Team from './containers/Team.js'
+import Case from './containers/Case.js'
 
 class Router extends Component {
   render() {
@@ -13,6 +14,8 @@ class Router extends Component {
         return <Home {...this.props} />;
       case 'team':
         return <Team {...this.props} />;
+      case 'case':
+        return <Case {...this.props} />;
       default:
         return (
           <div>
