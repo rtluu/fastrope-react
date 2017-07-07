@@ -1,0 +1,37 @@
+@import 'mixins';
+@import 'variables';
+
+.footer{
+  background: #2A2A2A;
+  padding: 55px 70px;
+  position: relative;
+  width: 100%;
+
+  .left{
+    display: inline-block;
+    p{
+      color: rgba(255,255,255,0.8);
+      font-family: 'Open Sans', sans-serif;
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+  .right{
+    display: inline-block;
+    position: absolute;
+    right: 60px;
+
+    .page-link{
+      color: white;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 18px;
+      line-height: 18px;
+      padding: 10px;
+      @include transition( all 0.2s );
+
+      &:hover{
+        opacity: 0.7;
+      }
+    }
+  }
+}

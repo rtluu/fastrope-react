@@ -1,6 +1,10 @@
 @import 'mixins';
 @import 'variables';
 
+//Unnested Home Text Changes
+#bold{font-weight: 900;}
+#italic{ font-family: $stixBI;font-style: italic;}
+
 //Hero (Main) Block
 .hero-block{
   background: url('../img/home/backgrounds/windmill.png');
@@ -8,15 +12,14 @@
   background-repeat: no-repeat;
   background-position: center;
   display: block;
-  padding-bottom: 180px;
-  width: 100vw;
+  width: 100%;
 
   .hero-inner{
     display: block;
     margin: 0 auto;
     max-width: 750px;
+    padding: 192px 0 180px 0;
     position: relative;
-    top: 192px;
 
     .hero-headline{
       color: white;
@@ -24,16 +27,6 @@
       font-weight: 300;
       line-height: 77px;
       text-align: center;
-
-      #bold{
-        font-weight: 900;
-      }
-
-      #italic{
-        font-family: 'Stix-BoldItalic';
-        font-weight: 600;
-        font-style: italic;
-      }
     }
 
     .hero-divider{
@@ -47,7 +40,7 @@
 
     .hero-description{
       color: #B9B9B9;
-      font-family: 'Stix-Italic';
+      font-family: $stixI;
       font-style: italic;
       font-size: 28px;
       text-align: center;
@@ -65,8 +58,8 @@
         cursor: pointer;
         height: 65px;
         margin-top: 90px;
-        margin-bottom: 180px;
         width: 375px;
+        @include transition( all 0.2s);
 
         &:hover{
           background: $fr-yellow;
@@ -80,13 +73,14 @@
           color: $fr-yellow;
           font-size: 20px;
           font-weight: 700;
+          @include transition( all 0.2s);
         }
       }
     }
   }
 }
 
-//Featured In Block;
+//Press Block;
 .press-block{
   background: #CCCCCC;
   display: block;
@@ -137,21 +131,20 @@
 }
 
 
-//capabilities Block
+//Capabilities Block
 .capabilities-block{
   background: url('../img/home/backgrounds/eeg.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   display: block;
-  padding-bottom: 200px;
   width: 100vw;
 
   .capabilities-inner{
     display: block;
     margin: 0 auto;
     position: relative;
-    padding: 200px 0 0 0;
+    padding: 200px 0;
 
     .capabilities-headline{
       color: white;
@@ -162,22 +155,12 @@
       margin: 0 auto;
       max-width: 990px;
       text-align: center;
-
-      #bold{
-        font-weight: 900;
-      }
-
-      #italic{
-        font-family: 'Stix-BoldItalic';
-        font-weight: 600;
-        font-style: italic;
-      }
     }
 
     .capabilities-list{
       display: block;
       margin: 150px auto 0 auto;
-      max-width: 1318px;
+      max-width: 1315px;
 
       .capabilities-item{
         display: inline-block;
@@ -194,6 +177,261 @@
           font-size: 18px;
           font-weight: 600;
           margin-top: 35px;
+        }
+      }
+    }
+  }
+}
+
+
+//Inspire Block
+.inspire-block{
+  background: #333333;
+  display: block;
+  padding: 20px 0;
+
+  .inspire-text{
+    color: #b5b5b5;
+    font-family: $stixI;
+    font-size: 28px;
+    line-height: 43px;
+    margin: 80px auto;
+    max-width: 854px;
+    text-align: center;
+  }
+}
+
+
+//Work Block
+.work-block{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  .work-item{
+    cursor: pointer;
+    flex-basis: 33.33%;
+    height: 600px;
+    padding: 50px;
+    position: relative;
+
+    &:hover{
+      &:before{
+        background: rgba(0,0,0,0.7);
+      }
+    }
+
+    &:before{
+      background: rgba(35,54,112,0.7);
+      bottom: 0;
+      content: '';
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 1;
+      @include transition( all 0.2s);
+    }
+
+    &#labor{
+      background: url('../img/home/work/labor.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &#wind{
+      background: url('../img/home/work/wind.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &#crowdsourcing{
+      background: url('../img/home/work/crowdsourcing.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &#healthcare{
+      background: url('../img/home/work/healthcare.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &#fitness{
+      background: url('../img/home/work/fitness.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &#unicorn{
+      background: url('../img/home/work/unicorn.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &:nth-child(1){
+      .work-text{
+        font-family: $stixBI;
+        left: 50px;
+        max-width: 220px;
+        text-align: left;
+      }
+    }
+    &:nth-child(2){
+      .work-text{
+        font-weight: 900;
+        left: 50%;
+        min-width: 260px;
+        text-align: center;
+        @include transform( translateX(-50%));
+      }
+    }
+    &:nth-child(3){
+      .work-text{
+        font-family: $stixBI;
+        max-width: 270px;
+        right: 50px;
+        text-align: right;
+      }
+    }
+    &:nth-child(4){
+      .work-text{
+        bottom: 50px;
+        font-weight: 900;
+        left: 50px;
+        max-width: 250px;
+        text-align: left;
+      }
+    }
+    &:nth-child(5){
+      .work-text{
+        bottom: 50px;
+        font-family: $stixBI;
+        left: 50%;
+        text-align: center;
+        @include transform( translateX(-50%));
+      }
+    }
+    &:nth-child(6){
+      .work-text{
+        bottom: 50px;
+        font-weight: 900;
+        max-width: 200px;
+        right: 50px;
+        text-align: right;
+      }
+    }
+
+    .work-text{
+      color: white;
+      font-size: 48px;
+      line-height: 54px;
+      position: absolute;
+      z-index: 2;
+
+      &:after{
+        content: url('../img/symbols/arrows.svg');
+        height: 19px;
+        margin-left: 5px;
+        margin-top: -1px;
+        position: absolute;
+        width: 21px;
+      }
+    }
+  }
+}
+
+
+//People Block
+.people-block{
+  background: #cccccc;
+  display: block;
+  padding: 20px 0;
+
+  .people-text{
+    color: #555555;
+    font-family: $stixI;
+    font-size: 28px;
+    line-height: 43px;
+    margin: 80px auto;
+    max-width: 854px;
+    text-align: center;
+
+    #team-arrow{
+      background: url('../img/symbols/arrows.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 21px 19px;
+      box-sizing: content-box;
+      cursor: pointer;
+      height: 19px;
+      margin-top: 3px;
+      padding: 10px 5px;
+      position: absolute;
+      width: 21px;
+    }
+  }
+}
+
+
+//CTA Block
+.cta-block{
+  background: url('../img/home/backgrounds/explosion.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  width: 100%;
+
+  .cta-inner{
+    display: block;
+    margin: 0 auto;
+    max-width: 580px;
+    padding: 174px 0;
+
+    .cta-headline{
+      color: white;
+      font-size: 66px;
+      font-weight: 300;
+      line-height: 77px;
+      text-align: center;
+    }
+
+    .cta-button-link{
+      display: inline-block;
+      left: 50%;
+      position: relative;
+      @include transform( translateX(-50%));
+
+      #cta-button{
+        background: none;
+        border: 4px solid $fr-yellow;
+        cursor: pointer;
+        height: 65px;
+        margin-top: 50px;
+        width: 375px;
+        @include transition( all 0.2s);
+
+        &:hover{
+          background: $fr-yellow;
+
+          .button-text{
+            color: white;
+          }
+        }
+
+        .button-text{
+          color: $fr-yellow;
+          font-size: 20px;
+          font-weight: 700;
+          @include transition( all 0.2s);
         }
       }
     }

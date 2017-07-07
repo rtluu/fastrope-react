@@ -6,6 +6,9 @@ import data from './data.js'
 
 import Router from './router.js'
 
+//Stix Local Fonts (fonts.scss)
+require('./stylesheets/fonts.scss');
+
 function onDataChange() {
   // Splits location into `/` separated parts,
   const location = window.location.hash.replace(/^#\/?|\/$/g, '').split('/');

@@ -3,10 +3,11 @@ require('../stylesheets/home.scss');
 
 import React from 'react'
 import Nav from '../components/Nav.jsx'
+import Footer from '../components/Footer.jsx'
 
 const Home = (props) => {
   return (
-    <div>
+    <div id="home">
       <Nav />
 
       <div className="hero-block">
@@ -14,7 +15,7 @@ const Home = (props) => {
           <h1 className="hero-headline">We are <span id="bold">building</span> the world we <span id="italic">want</span> to live in.</h1>
           <div className="hero-divider"></div>
           <h4 className="hero-description">Fastrope is an elite team of entrepreneurial builders who partner with world-class innovators to make crazy ideas real.</h4>
-          <a className="hero-button-link" href="/contact.html">
+          <a className="hero-button-link" href="#contact">
             <button id="hero-button">
               <h5 className="button-text">LET'S BUILD SOMETHING AMAZING</h5>
             </button>
@@ -77,6 +78,48 @@ const Home = (props) => {
           </ul>
         </div>
       </div>
+
+      <div className="inspire-block">
+        <h3 className="inspire-text">We tackle audacious and inspiring problems with awesome partners, and together we make an impact at global scale.</h3>
+      </div>
+
+      <div id="work" className="work-block">
+        <div id="labor" className="work-item">
+          <h4 className="work-text">Ending human trafficking</h4>
+        </div>
+        <div id="wind" className="work-item">
+          <h4 className="work-text">Increasing wind power capacity</h4>
+        </div>
+        <div id="crowdsourcing" className="work-item">
+          <h4 className="work-text">Accelerating micro- philanthropy</h4>
+        </div>
+        <div id="healthcare" className="work-item">
+          <h4 className="work-text">Disrupting healtcare delivery</h4>
+        </div>
+        <div id="fitness" className="work-item">
+          <h4 className="work-text">Supercharging human<br></br>ability</h4>
+        </div>
+        <div id="unicorn" className="work-item">
+          <h4 className="work-text">Creating unicorn startups</h4>
+        </div>
+      </div>
+
+      <div className="people-block">
+        <h3 className="people-text">Meet our team of passionate and brilliant builders, including scientists, technologists, and creatives who are as inspiring as their work.<a href="#team"><span id="team-arrow"/></a></h3>
+      </div>
+
+      <div className="cta-block">
+        <div className="cta-inner">
+          <h1 className="cta-headline">No idea is <span id="bold">too big</span> or <span id="italic">too small</span>, so...</h1>
+            <a className="cta-button-link" href="#contact">
+              <button id="cta-button">
+                <h5 className="button-text">LET'S BUILD SOMETHING AMAZING</h5>
+              </button>
+            </a>
+        </div>
+      </div>
+
+      <Footer />
     </div>
   )
 }

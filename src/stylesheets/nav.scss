@@ -1,11 +1,9 @@
-.nav{
-  background: white;
-  padding: 14px 30px;
-  position: relative;
-  width: 100%;
+@import 'mixins';
+@import 'variables';
 
-  //Unique Styling for Homepage Nav
-  &#home{
+//Unique Styling for Homepage Nav
+#home{
+  .nav{
     background: transparent;
     padding: 30px 45px;
     position: absolute;
@@ -21,12 +19,24 @@
         color: white;
       }
     }
-  } //End Homepage Nav
+  }
+} //End Unique Homepage Styling
+
+.nav{
+  background: white;
+  padding: 14px 30px;
+  position: relative;
+  width: 100%;
 
   .left{
     display: inline-block;
 
     .home-link{
+      @include transition( all 0.2s);
+
+      &:hover{
+        opacity: 0.7;
+      }
 
       #fr-logo{
         background: url('../img/logo/fr-logo-yellow.svg');
@@ -52,6 +62,7 @@
       margin: 0 10px;
       padding: 10px;
       font-size: 18px;
+      @include transition( all 0.2s);
 
       &:hover{
         opacity: 0.7;

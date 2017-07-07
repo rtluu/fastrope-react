@@ -1,4 +1,4 @@
-require('../stylesheets/nav.scss');
+require('../stylesheets/footer.scss');
 
 import React from 'react';
 
@@ -13,18 +13,14 @@ import React from 'react';
 
   render(){
     return(
-      <nav className="nav">
+      <footer className="footer">
         <div className="left">
-          <a className="home-link" href="#">
-            <div id="fr-logo"></div>
-          </a>
+          <p>Copyright FastRope Labs 2017. All rights reserved.</p>
         </div>
         <div className="right">
-          <a className="page-link" href="#">Work</a>
-          <a className="page-link" href="#team">Team</a>
           <a className="page-link" href="#">Contact</a>
         </div>
-      </nav>
+      </footer>
     );
   }
 }

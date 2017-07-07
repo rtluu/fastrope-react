@@ -28,7 +28,7 @@ module.exports = {
         loaders: ['style', 'css', 'sass']
       },
       {
-        test: /\.jpe?g$|\.ico$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$|\.wav$|\.mp3$/,
+        test: /\.jpe?g$|\.ico$|\.gif$|\.png$|\.svg$|\.eot$|\.otf$|\.woff$|\.woff2$|\.wav$|\.mp3$/,
         loader: 'file-loader?name=[name].[ext]'  // <-- retain original file name
       }
     ]

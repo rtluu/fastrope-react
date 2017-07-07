@@ -1,17 +1,11 @@
 import React from 'react'
+import Nav from '../components/Nav.jsx'
 
 const Team = (props) => {
   return (
     <div>
+      <Nav />
       <h1>Team Page</h1>
-      <p>
-        {
-          props.teamData
-        }
-      </p>
-      <a href="#">
-        Back to the other page.
-      </a>
     </div>
   )
 }
