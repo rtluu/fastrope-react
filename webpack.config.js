@@ -1,17 +1,14 @@
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
-module.exports = {
-  entry: [
-    './src/index.js',
-    './src/stylesheets/app.scss'
-],
+const path = require('path');
+const webpack = require('webpack');
 
- output: {
-   filename: 'index.js',
-   chunkFilename: "[id].js",
-   path: __dirname + '/public/',
-   libraryTarget: 'umd'
-},
+module.exports = {
+  entry: path.join(__dirname, 'src', 'index.jsx'),
+  output: {
+    path: path.join(__dirname, 'public'),
+    filename: 'bundle.js'
+  },
 
   module: {
     loaders: [

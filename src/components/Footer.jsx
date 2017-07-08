@@ -18,7 +18,7 @@ import React from 'react';
           <p>Copyright FastRope Labs 2017. All rights reserved.</p>
         </div>
         <div className="right">
-          <a className="page-link" href="#">Contact</a>
+          <a className="page-link" href="/">Contact</a>
         </div>
       </footer>
     );
