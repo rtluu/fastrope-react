@@ -15,14 +15,14 @@ import React from 'react';
     return(
       <nav className="nav">
         <div className="left">
-          <a className="home-link" href="#">
+          <a className="home-link" href="/">
             <div id="fr-logo"></div>
           </a>
         </div>
         <div className="right">
-          <a className="page-link" href="#">Work</a>
-          <a className="page-link" href="#team">Team</a>
-          <a className="page-link" href="#">Contact</a>
+          <a className="page-link" href="#work">Work</a>
+          <a className="page-link" href="/team">Team</a>
+          <a className="page-link" href="/">Contact</a>
         </div>
       </nav>
     );
