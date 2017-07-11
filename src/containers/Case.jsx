@@ -8,6 +8,7 @@ const Case = (props) => {
   return (
     <div id="case">
       <Nav />
+      <h1>Work Page</h1>
       <Footer />
     </div>
   )

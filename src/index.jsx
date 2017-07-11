@@ -1,12 +1,14 @@
+//Stix Local Fonts
+require('./stylesheets/fonts.scss');
+
 import "babel-polyfill";
 import React, {Component} from 'react';
 import ReactDom from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 
-import Routes from './routes.jsx'
+import Routes from './routes';
 
-//Stix Local Fonts (fonts.scss)
-require('./stylesheets/fonts.scss');
+var Route = Router.Route;
 
 let mountNode = document.getElementById('app');
 
