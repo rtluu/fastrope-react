@@ -1,2 +1,86 @@
 @import 'mixins';
 @import 'variables';
+
+
+.team-title{
+  display: block;
+  font-size: 60px;
+  margin: 200px auto;
+  text-align: center;
+}
+
+.team-description{
+  color: #474747;
+  display: block;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 40px;
+  margin: 50px auto;
+  max-width: 1045px;
+  text-align: center;
+}
+
+.team-box{
+  display: block;
+  margin: 60px auto;
+  max-width: 1062px;
+
+  .team-list{
+
+    .teammate{
+      display: inline-block;
+      list-style: none;
+      margin: 25px;
+      position: relative;
+
+      &:hover{
+        .teammate-overlay{
+          opacity: 1;
+        }
+      }
+
+      //Fix for Mike's Long Description
+      &#mike{
+        .teammate-overlay{
+          .teammate-title{
+            margin-top: 30px;
+          }
+        }
+      }
+
+      .teammate-pic{
+        height: 284px;
+        width: 304px;
+      }
+
+      .teammate-overlay{
+        background: rgba(70, 70, 70, 0.8);
+        box-sizing: content-box;
+        height: 284px;
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        text-align: center;
+        top: 0;
+        width: 100%;
+        @include transition( all 0.2s );
+
+        .teammate-title{
+          color: white;
+          font-family: 'Open Sans', sans-serif;
+          font-size: 16px;
+          font-weight: 600;
+          margin: 50px 0 0 0;
+        }
+
+        .teammate-description{
+          color: white;
+          font-family: 'Open Sans', sans-serif;
+          font-size: 12px;
+          font-weight: 300;
+          margin: 4px 16px;
+        }
+      }
+    }
+  }
+}

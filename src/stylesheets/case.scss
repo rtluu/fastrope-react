@@ -1,2 +1,166 @@
 @import 'mixins';
 @import 'variables';
+
+.case-header{
+  background: url('../img/case/wodify-bg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  width: 100%;
+
+  .case-hero{
+    margin: 0 auto;
+    padding: 200px 0 245px 0;
+    text-align: center;
+
+    .case-headline{
+      box-sizing: content-box;
+      color: white;
+      display: block;
+      font-size: 60px;
+      font-weight: 900;
+      margin: 0 auto;
+      padding-bottom: 90px;
+    }
+
+    .case-tagline{
+      color: white;
+      font-size: 27px;
+      font-weight: 300;
+    }
+  }
+}
+
+.case-content{
+  display: block;
+
+  .content-main{
+    display: inline-block;
+    margin: 100px 140px;
+    width: 675px;
+
+    .text-header{
+      color: $text-gray;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 28px;
+      margin-bottom: 14px;
+    }
+
+    .text{
+      color: $text-gray;
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 28px;
+      margin-bottom: 20px;
+    }
+
+    .img{
+      background: #cccccc;
+      display: block;
+      height: 250px;
+      margin: 46px 0 60px;
+      width: 100%;
+    }
+  }
+
+  .content-side{
+    display: inline-block;
+    margin: 100px 40px;
+    vertical-align: top;
+    width: 230px;
+
+    .logo{
+      background: gray;
+      display: block;
+      height: 200px;
+      margin: 0 auto;
+      width: 200px;
+    }
+
+    .url{
+      cursor: pointer;
+      display: inline-block;
+      left: 50%;
+      margin: 20px 0;
+      padding: 5px;
+      position: relative;
+      @include transform( translateX(-50%));
+
+      &:hover{
+        .url-text{
+          color: #0704CC;
+          text-decoration: underline;
+        }
+      }
+
+      .url-text{
+        color: #323232;
+        font-size: 28px;
+        font-weight: 400;
+        @include transition( all 0.2s );
+      }
+    }
+
+    .what-we-did{
+      color: $text-gray;
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .share-link{
+      display: inline-block;
+      left: 50%;
+      margin: 40px 0;
+      position: relative;
+      @include transform( translateX(-50%));
+
+      .share-button{
+        border: 0;
+        background: #02008B;
+        color: white;
+        cursor: pointer;
+        font-size: 14px;
+        padding: 24px 72px;
+        @include transition( all 0.2s );
+
+        &:hover{
+          opacity: 0.8;
+        }
+      }
+    }
+
+    .testimony-block{
+      display: block;
+      margin: 60px auto;
+      max-width: 230px;
+
+      .testimony-pic{
+        background: #6a6a6a;
+        display: block;
+        height: 150px;
+        margin: 0 auto 20px auto;
+        width: 150px;
+      }
+
+      .testimony-text{
+        color: $text-gray;
+        font-size: 14px;
+        font-weight: 400;
+        font-style: italic;
+        line-height: 20px;
+        margin-bottom: 8px;
+        text-align: center;
+      }
+
+      .testimony-source{
+        color: $text-gray;
+        font-size: 12px;
+        font-weight: 400;
+        text-align: right;
+      }
+    }
+  }
+}
