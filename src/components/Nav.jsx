@@ -22,7 +22,7 @@ import React from 'react';
         <div className="right">
           <a className="page-link" href="/case">Work</a>
           <a className="page-link" href="/team">Team</a>
-          <a className="page-link" href="/">Contact</a>
+          <a className="page-link" href="/contact">Contact</a>
         </div>
       </nav>
     );
