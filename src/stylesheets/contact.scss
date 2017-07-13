@@ -1,0 +1,215 @@
+@import 'mixins';
+@import 'variables';
+
+.contact-hero{
+  background: url('../img/contact/map.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 200px 0 284px 0;
+
+  .contact-headline{
+    color: white;
+    font-family: $stixB;
+    font-size: 48px;
+    text-align: center;
+  }
+}
+
+.contact-form{
+  background: white;
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px rgba(0,0,0,.5);
+  display: inline-block;
+  left: 50%;
+  padding: 45px 60px;
+  position: relative;
+  top: -80px;
+  width: 675px;
+  @include transform( translateX(-50%) );
+
+
+  //Get in Touch / Find Us
+  .contact-cta{
+    position: absolute;
+
+    &#get-in-touch{
+      left: -280px;
+      max-width: 250px;
+      top: 170px;
+    }
+
+    &#find-us{
+      max-width: 230px;
+      right: -260px;
+      top: 170px;
+    }
+
+    .contact-cta-title{
+      color: #535353;
+      font-family: $stixB;
+      font-size: 35px;
+    }
+
+    .contact-cta-text{
+      color: #535353;
+      font-family: $stix;
+      font-size: 20px;
+    }
+  }
+
+  .form-group{
+
+    .form-control{
+      border: 3px solid #CACACA;
+      height: 75px;
+      font-size: 20px;
+      font-family: 'Open Sans', sans-serif;
+      line-height: 30px;
+      margin-bottom: 20px;
+      outline: none;
+      padding: 20px;
+      width: 100%;
+
+      &:focus{
+        border: 3px solid black;
+
+        &::placeholder{
+          color: black;
+        }
+      }
+
+      &::placeholder{
+        color: #C3C3C3;
+        text-align: center;
+      }
+
+      &#message{
+        min-height: 208px;
+      }
+    }
+
+    //Style 'Interests' form-group
+    &#interests{
+      border: 3px solid #CACACA;
+      box-sizing: border-box;
+      height: 280px;
+      margin-bottom: 20px;
+      padding: 0 32px;
+      text-align: center;
+
+      h3{
+        color: #C3C3C3;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        padding: 20px 0 0 0;
+      }
+
+      .checkbox-inline{
+        cursor: pointer;
+        display: inline-block;
+        min-width: 80px;
+        margin: 10px 40px;
+
+        .checkbox{
+          height: 0;
+          opacity: 0;
+
+          &:hover ~ img{
+            opacity: 1;
+            @include filter( grayscale, 0);
+          }
+
+          &:hover ~ p{
+            color: $fr-yellow;
+          }
+
+          &:checked ~ img{
+            opacity: 1;
+            @include filter( grayscale, 0);
+          }
+
+          &:checked ~ p{
+            color: $fr-yellow;
+          }
+        }
+
+        img{
+          display: block;
+          margin: 0 auto;
+          vertical-align: top;
+          width: 30px;
+          @include filter( grayscale, 100%);
+          @include transition( all 0.2s );
+        }
+
+        p{
+          color: #AAA9A9;
+          font-size: 15px;
+          font-weight: 500;
+          margin-top: 8px;
+          @include transition( all 0.2s ) ;
+        }
+      }
+    }
+
+    //Style 'when' form-group
+    &#when{
+      border: 3px solid #CACACA;
+      box-sizing: border-box;
+      height: 240px;
+      padding: 0 32px;
+
+      h3{
+        color: #C3C3C3;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        padding: 20px 0 20px 0;
+        text-align: center;
+      }
+
+      .radio-inline{
+        cursor: pointer;
+        display: inline-block;
+        min-width: 150px;
+        margin: 15px 0px 15px 60px;
+        text-align: left;
+
+        input{
+          cursor: pointer;
+        }
+
+        span{
+          color: #AAA9A9;
+          font-size: 15px;
+          font-weight: 500;
+          margin-left: 10px
+        }
+      }
+    }
+
+    &#submit{
+      .btn{
+        background: #433B6B;
+        border: 0;
+        color: white;
+        cursor: pointer;
+        display: block;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 25px;
+        font-weight: 300;
+        height: 70px;
+        margin: 60px auto 15px auto;
+        text-align: center;
+        width: 420px;
+        @include transition( all 0.2s );
+
+        &:hover{
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}
