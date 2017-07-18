@@ -2,12 +2,43 @@
 @import 'variables';
 
 .case-header{
-  background: url('../img/case/wodify-bg.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   display: block;
   width: 100%;
+
+  &#wodify{
+    background: url('../img/case/wodify-bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &#gwmfa{
+    background: url('../img/case/gwmfa-bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &#verite{
+    background: url('../img/case/verite-bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &#networkforgood{
+    background: url('../img/case/networkforgood-bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &#envision{
+    background: url('../img/case/envision-bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 
   .case-hero{
     margin: 0 auto;
@@ -72,11 +103,9 @@
     width: 230px;
 
     .logo{
-      background: gray;
       display: block;
-      height: 200px;
       margin: 0 auto;
-      width: 200px;
+      width: 160px;
     }
 
     .url{

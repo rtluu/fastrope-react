@@ -84,24 +84,24 @@ const Home = (props) => {
       </div>
 
       <div id="work" className="work-block">
-        <div id="labor" className="work-item">
+        <a href="/verite" id="labor" className="work-item">
           <h4 className="work-text">Ending human trafficking</h4>
-        </div>
-        <div id="wind" className="work-item">
+        </a>
+        <a href="/envision" id="wind" className="work-item">
           <h4 className="work-text">Increasing wind power capacity</h4>
-        </div>
-        <div id="crowdsourcing" className="work-item">
+        </a>
+        <a href="/networkforgood" id="crowdsourcing" className="work-item">
           <h4 className="work-text">Accelerating micro- philanthropy</h4>
-        </div>
-        <div id="healthcare" className="work-item">
+        </a>
+        <a href="/gwmfa" id="healthcare" className="work-item">
           <h4 className="work-text">Disrupting healtcare delivery</h4>
-        </div>
-        <div id="fitness" className="work-item">
+        </a>
+        <a href="/wodify" id="fitness" className="work-item">
           <h4 className="work-text">Supercharging human<br></br>ability</h4>
-        </div>
-        <div id="unicorn" className="work-item">
+        </a>
+        <a id="unicorn" className="work-item">
           <h4 className="work-text">Creating unicorn startups</h4>
-        </div>
+        </a>
       </div>
 
       <div className="people-block">

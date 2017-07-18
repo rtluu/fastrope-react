@@ -20,7 +20,7 @@ import React from 'react';
           </a>
         </div>
         <div className="right">
-          <a className="page-link" href="/case">Work</a>
+          <a className="page-link" href="/#work">Work</a>
           <a className="page-link" href="/team">Team</a>
           <a className="page-link" href="/contact">Contact</a>
         </div>
