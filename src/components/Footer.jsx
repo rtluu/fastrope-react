@@ -15,7 +15,7 @@ import React from 'react';
     return(
       <footer className="footer">
         <div className="left">
-          <p>Copyright FastRope Labs 2017. All rights reserved.</p>
+          <p>Copyright FastRope Labs 2017.</p>
         </div>
         <div className="right">
           <a className="page-link" href="/contact">Contact</a>

@@ -44,6 +44,15 @@
     margin: 0 auto;
     padding: 200px 0 245px 0;
     text-align: center;
+    @media screen and (max-width: $stacked){
+      padding: 180px 0 205px 0;
+    }
+    @media screen and (max-width: $small){
+      padding: 170px 0 170px 0;
+    }
+    @media screen and (max-width: $phone){
+      padding: 160px 0 150px 0;
+    }
 
     .case-headline{
       box-sizing: content-box;
@@ -53,12 +62,33 @@
       font-weight: 900;
       margin: 0 auto;
       padding-bottom: 90px;
+      @media screen and (max-width: $stacked){
+        font-size: 54px;
+        padding-bottom: 75px;
+      }
+      @media screen and (max-width: $small){
+        font-size: 48px;
+        padding-bottom: 65px;
+      }
+      @media screen and (max-width: $phone){
+        font-size: 44px;
+        padding-bottom: 55px;
+      }
     }
 
     .case-tagline{
       color: white;
       font-size: 27px;
       font-weight: 300;
+      @media screen and (max-width: $stacked){
+        font-size: 24px;
+      }
+      @media screen and (max-width: $small){
+        font-size: 21px;
+      }
+      @media screen and (max-width: $phone){
+        font-size: 18px;
+      }
     }
   }
 }
@@ -68,8 +98,21 @@
 
   .content-main{
     display: inline-block;
-    margin: 100px 140px;
+    margin: 100px 10% 100px 140px;
     width: 675px;
+    @media screen and (max-width: $stacked){
+      display: block;
+      margin: 100px auto;
+      width: 600px;
+    }
+    @media screen and (max-width: $small){
+      margin: 80px auto;
+      width: 450px;
+    }
+    @media screen and (max-width: $phone){
+      margin: 60px auto;
+      width: calc(100% - 50px);
+    }
 
     .text-header{
       color: $text-gray;
@@ -77,6 +120,11 @@
       font-weight: 600;
       line-height: 28px;
       margin-bottom: 14px;
+      @media screen and (max-width: $small){
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 12px;
+      }
     }
 
     .text{
@@ -85,6 +133,21 @@
       font-weight: 300;
       line-height: 28px;
       margin-bottom: 20px;
+      @media screen and (max-width: $small){
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 16px;
+      }
+    }
+
+    .example{
+      display: block;
+      height: 250px;
+      margin: 50px auto 45px auto;
+      @media screen and (max-width: $stacked){
+        height: auto;
+        width: 100%;
+      }
     }
 
     .img{
@@ -93,6 +156,12 @@
       height: 250px;
       margin: 46px 0 60px;
       width: 100%;
+      @media screen and (max-width: $stacked){
+        margin: 40px 0 50px;
+      }
+      @media screen and (max-width: $small){
+        margin: 30px 0 40px;
+      }
     }
   }
 
@@ -101,70 +170,144 @@
     margin: 100px 40px;
     vertical-align: top;
     width: 230px;
-
-    .logo{
+    @media screen and (max-width: $stacked){
+      background: #ededed;
       display: block;
-      margin: 0 auto;
-      width: 160px;
+      margin: 0;
+      padding: 100px 0;
+      width: 100%;
+    }
+    @media screen and (max-width: $stacked){
+      padding: 60px 0;
     }
 
-    .url{
-      cursor: pointer;
-      display: inline-block;
-      left: 50%;
-      margin: 20px 0;
-      padding: 5px;
+    .logo-block{
+      display: block;
+      margin: 0 auto;
       position: relative;
-      @include transform( translateX(-50%));
+      width: 160px;
+      @media screen and (max-width: $stacked){
+        width: 600px;
+      }
+      @media screen and (max-width: $small){
+        width: 450px;
+      }
+      @media screen and (max-width: $phone){
+        width: calc(100% - 50px);
+      }
 
-      &:hover{
-        .url-text{
-          color: #0704CC;
-          text-decoration: underline;
+      .logo-inner{
+
+        @media screen and (max-width: $stacked){
+          display: inline-block;
+        }
+        @media screen and (max-width: $small){
+          display: block;
+        }
+
+        .logo{
+          display: block;
+          width: 160px;
+          @media screen and (max-width: $small){
+            margin: 0 auto;
+          }
+        }
+
+        .url{
+          cursor: pointer;
+          display: inline-block;
+          left: 50%;
+          margin: 20px 0;
+          padding: 5px;
+          position: relative;
+          @include transform( translateX(-50%));
+          @media screen and (max-width: $stacked){
+            padding: 5px 5px 5px 0;
+          }
+
+          &:hover{
+            .url-text{
+              color: #0704CC;
+              text-decoration: underline;
+            }
+          }
+
+          .url-text{
+            color: #323232;
+            font-size: 28px;
+            font-weight: 400;
+            @include transition( all 0.2s );
+            @media screen and (max-width: $small){
+              font-size: 24px;
+            }
+            @media screen and (max-width: $phone){
+              font-size: 20px;
+            }
+          }
+        }
+
+        .what-we-did{
+          color: $text-gray;
+          display: block;
+          margin: 0 auto;
+          text-align: center;
+          @media screen and (max-width: $stacked){
+            text-align: left;
+          }
+          @media screen and (max-width: $small){
+            text-align: center;
+          }
         }
       }
 
-      .url-text{
-        color: #323232;
-        font-size: 28px;
-        font-weight: 400;
-        @include transition( all 0.2s );
-      }
-    }
 
-    .what-we-did{
-      color: $text-gray;
-      display: block;
-      margin: 0 auto;
-      text-align: center;
-    }
+      .share-link{
+        display: inline-block;
+        left: 50%;
+        margin: 40px 0;
+        position: relative;
+        @include transform( translateX(-50%));
+        @media screen and (max-width: $stacked){
+          left: auto;
+          position: absolute;
+          right: 0;
+          vertical-align: top;
+          @include transform( translateX(0));
+        }
+        @media screen and (max-width: $small){
+          display: inline-block;
+          left: 50%;
+          margin: 40px 0 0 0;
+          position: relative;
+          right: auto;
+          @include transform( translateX(-50%));
+        }
 
-    .share-link{
-      display: inline-block;
-      left: 50%;
-      margin: 40px 0;
-      position: relative;
-      @include transform( translateX(-50%));
+        .share-button{
+          border: 0;
+          background: #02008B;
+          color: white;
+          cursor: pointer;
+          font-size: 14px;
+          outline: none;
+          padding: 24px 72px;
+          white-space: nowrap;
+          @include transition( all 0.2s );
 
-      .share-button{
-        border: 0;
-        background: #02008B;
-        color: white;
-        cursor: pointer;
-        font-size: 14px;
-        padding: 24px 72px;
-        @include transition( all 0.2s );
-
-        &:hover{
-          opacity: 0.8;
+          &:hover{
+            opacity: 0.8;
+          }
         }
       }
     }
 
     .testimony-block{
       display: block;
-      margin: 60px auto;
+      margin: 60px auto 0 auto;
       max-width: 230px;
+      @media screen and (max-width: $stacked){
+        display: none;
+      }
 
       .testimony-pic{
         background: #6a6a6a;

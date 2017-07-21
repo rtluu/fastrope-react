@@ -6,20 +6,60 @@
   padding: 55px 70px;
   position: relative;
   width: 100%;
+  @media screen and (max-width: $small){
+    padding: 120px 0 55px 0;
+  }
 
   .left{
     display: inline-block;
+    @media screen and (max-width: $small){
+      left: 50%;
+      position: relative;
+      text-align: center;
+      @include transform( translateX(-50%));
+    }
+
     p{
       color: rgba(255,255,255,0.8);
       font-family: 'Open Sans', sans-serif;
       font-size: 16px;
       line-height: 18px;
+      @media screen and (max-width: $small){
+        font-size: 14px;
+        line-height: 16px;
+      }
+
+      @media screen and (max-width: $phone){
+        &:after{
+          display: none;
+        }
+      }
+
+      &:after{
+        color: rgba(255,255,255,0.8);
+        content: 'All rights reserved.';
+        font-family: 'Open Sans', sans-serif;
+        font-size: 16px;
+        line-height: 18px;
+        margin-left: 5px;
+        position: relative;
+        @media screen and (max-width: $small){
+          font-size: 14px;
+          line-height: 16px;
+        }
+      }
     }
   }
   .right{
     display: inline-block;
     position: absolute;
     right: 60px;
+    @media screen and (max-width: $small){
+      left: 50%;
+      right: auto;
+      top: 60px;
+      @include transform( translateX(-50%));
+    }
 
     .page-link{
       color: white;
@@ -28,6 +68,10 @@
       line-height: 18px;
       padding: 10px;
       @include transition( all 0.2s );
+      @media screen and (max-width: $small){
+        font-size: 16px;
+        line-height: 16px;
+      }
 
       &:hover{
         opacity: 0.7;

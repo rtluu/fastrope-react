@@ -27,10 +27,15 @@ const Wodify = (props) => {
         </div>
 
         <div className="content-side">
-          <img className="logo" src={require("../../img/case/wodify-logo.png")}  />
-          <a className="url"><h6 className="url-text">www.wodify.com</h6></a>
-          <p className="what-we-did">What we did: IOT</p>
-          <a className="share-link"><button className="share-button">share this</button></a>
+
+          <div className="logo-block">
+            <div className="logo-inner">
+              <img className="logo" src={require("../../img/case/wodify-logo.png")}  />
+              <a className="url"><h6 className="url-text">www.wodify.com</h6></a>
+              <p className="what-we-did">What we did: IOT</p>
+            </div>
+            <a className="share-link"><button className="share-button">share this</button></a>
+          </div>
 
           <div className="testimony-block">
             <div className="testimony-pic" />

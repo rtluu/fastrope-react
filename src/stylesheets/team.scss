@@ -3,9 +3,12 @@
 
 
 .team-title{
+  background: rgba(35,54,112,1);
+  color: white;
   display: block;
   font-size: 60px;
-  margin: 200px auto;
+  margin: 0 auto;
+  padding: 200px 0;
   text-align: center;
 }
 
@@ -15,15 +18,41 @@
   font-size: 30px;
   font-weight: 300;
   line-height: 40px;
-  margin: 50px auto;
-  max-width: 1045px;
+  margin: 85px auto 0 auto;
+  max-width: 1032px;
   text-align: center;
+  @media screen and (max-width: $col-2){
+    font-size: 24px;
+    line-height: 34px;
+    margin: 75px auto 0 auto;
+    max-width: 678px;
+  }
+  @media screen and (max-width: $col-1){
+    font-size: 20px;
+    line-height: 30px;
+    margin: 65px auto 0 auto;
+    max-width: calc(100% - 100px);
+  }
+  @media screen and (max-width: $phone){
+    font-size: 18px;
+    line-height: 28px;
+    margin: 60px auto 0 auto;
+    max-width: calc(100% - 60px);
+  }
 }
 
 .team-box{
   display: block;
   margin: 60px auto;
   max-width: 1062px;
+  @media screen and (max-width: $col-2){
+    margin: 50px auto;
+    max-width: 708px;
+  }
+  @media screen and (max-width: $col-1){
+    margin: 60px auto;
+    max-width: 354px;
+  }
 
   .team-list{
 
@@ -32,6 +61,11 @@
       list-style: none;
       margin: 25px;
       position: relative;
+      @media screen and (max-width: $col-1){
+        display: block;
+        margin: 50px auto;
+        width: 304px;
+      }
 
       &:hover{
         .teammate-overlay{

@@ -26,10 +26,15 @@ const Envision = (props) => {
         </div>
 
         <div className="content-side">
-          <img className="logo" src={require("../../img/case/envision-logo.png")}  />
-          <a className="url"><h6 className="url-text">envision.com</h6></a>
-          <p className="what-we-did">Categories: Data Science</p>
-          <a className="share-link"><button className="share-button">share this</button></a>
+
+          <div className="logo-block">
+            <div className="logo-inner">
+              <img className="logo" src={require("../../img/case/envision-logo.png")}  />
+              <a className="url"><h6 className="url-text">envision.com</h6></a>
+              <p className="what-we-did">Categories: Data Science</p>
+            </div>
+            <a className="share-link"><button className="share-button">share this</button></a>
+          </div>
 
           <div className="testimony-block">
             <div className="testimony-pic" />

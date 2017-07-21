@@ -15,7 +15,7 @@ const Home = (props) => {
           <h1 className="hero-headline">We are <span id="bold">building</span> the world we <span id="italic">want</span> to live in.</h1>
           <div className="hero-divider"></div>
           <h4 className="hero-description">Fastrope is an elite team of entrepreneurial builders who partner with world-class innovators to make crazy ideas real.</h4>
-          <a className="hero-button-link" href="#contact">
+          <a className="hero-button-link" href="/contact">
             <button id="hero-button">
               <h5 className="button-text">LET'S BUILD SOMETHING AMAZING</h5>
             </button>
@@ -105,7 +105,7 @@ const Home = (props) => {
       </div>
 
       <div className="people-block">
-        <h3 className="people-text">Meet our team of passionate and brilliant builders, including scientists, technologists, and creatives who are as inspiring as their work.<a href="#team"><span id="team-arrow"/></a></h3>
+        <h3 className="people-text">Meet our team of passionate and brilliant builders, including scientists, technologists, and creatives who are as inspiring as their work.<a href="/team"><span id="team-arrow"/></a></h3>
       </div>
 
       <div className="cta-block">
