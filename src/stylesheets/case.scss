@@ -302,12 +302,9 @@
     }
 
     .testimony-block{
-      display: block;
+      display: none;
       margin: 60px auto 0 auto;
       max-width: 230px;
-      @media screen and (max-width: $stacked){
-        display: none;
-      }
 
       .testimony-pic{
         background: #6a6a6a;

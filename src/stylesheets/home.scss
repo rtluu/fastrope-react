@@ -265,11 +265,17 @@
         max-width: 850px;
         padding: 0 30px;
       }
+      @media screen and (max-width: 850px){
+        max-width: 750px;
+      }
       @media screen and (max-width: $small){
         font-size: 44px;
         line-height: 50px;
         max-width: 710px;
         padding: 0 30px;
+      }
+      @media screen and (max-width: 710px){
+        max-width: 620px;
       }
       @media screen and (max-width: $phone){
         font-size: 32px;
